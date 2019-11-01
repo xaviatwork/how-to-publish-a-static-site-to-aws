@@ -64,8 +64,8 @@ CodeBuild debe ejecutarse con permisos suficientes para realizar las tareas indi
         {
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:logs:eu-west-1:xxxxxxxxxxxx:log-group:/aws/codebuild/www_zeta-two_com",
-                "arn:aws:logs:eu-west-1:xxxxxxxxxxxx:log-group:/aws/codebuild/www_zeta-two_com:*"
+                "arn:aws:logs:eu-central-1:xxxxxxxxxxxx:log-group:/aws/codebuild/<projectname>",
+                "arn:aws:logs:eu-central-1:xxxxxxxxxxxx:log-group:/aws/codebuild/<projectname>:*"
             ],
             "Action": [
                 "logs:CreateLogGroup",
@@ -76,7 +76,7 @@ CodeBuild debe ejecutarse con permisos suficientes para realizar las tareas indi
         {
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:s3:::codepipeline-eu-west-1-*"
+                "arn:aws:s3:::codepipeline-eu-central-1-*"
             ],
             "Action": [
                 "s3:PutObject",
